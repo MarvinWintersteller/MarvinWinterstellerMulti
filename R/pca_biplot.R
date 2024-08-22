@@ -103,4 +103,4 @@ pca_biplot <- function(pca_result, obs_labels = NULL, var_labels = TRUE, scale_o
 # Beispielanwendung der Funktion
 # pca_biplot(biopsy_pca, arrow_multiplier = 2)  # Verwende einen höheren Multiplikator für längere Pfeile
 # pca_biplot(biopsy_pca, arrow_multiplier = 6, obs_labels = rownames(biopsy_sample))
-# pca_biplot(biopsy_pca, arrow_multiplier = 6, obs_labels = rownames(biopsy_sample), habillage = biopsy_nomiss$class)
+

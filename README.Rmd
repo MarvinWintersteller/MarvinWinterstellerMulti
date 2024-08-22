@@ -1,0 +1,76 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# multipca
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of multipca is to provide a comprehensive set of tools for performing and visualizing Principal Component Analysis (PCA). This package simplifies the process of conducting PCA on multivariate data and helps users gain insights into the structure and relationships within their data.
+
+With multipca, you can:
+
+Perform PCA: Use the my_prcomp() function to perform PCA on any dataset, with options for centering and scaling the data.
+Visualize Explained Variance: Create scree plots with screeplot_variance() to easily visualize the proportion of variance explained by each principal component.
+Generate Biplots: Use the pca_biplot() function to create biplots that display both observations and variable loadings in the PCA space, with options to customize the plot and highlight groupings within the data.
+Summarize PCA Results: The summary.my_prcomp() function provides a detailed summary of the PCA results, including the standard deviations, proportion of variance, and cumulative variance explained by each component.
+multipca is designed to be user-friendly, making it easier for analysts, data scientists, and researchers to explore and interpret their multivariate data through PCA.
+
+## Installation
+
+You can install the development version of multipca from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+# install.packages("ggplot2")
+devtools::install_github("MarvinWintersteller/MarvinWinterstellerMulti")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(multipca)
+## basic example code
+
+# Load the cleaned biopsy dataset
+data("biopsy_sample") #Lazy Loading
+head(biopsy_sample)
+str(biopsy_sample)
+
+# Perform PCA
+biopsy_pca <- my_prcomp(biopsy_sample, scale. = TRUE)
+
+# Print the PCA summary
+summary.my_prcomp(biopsy_pca)
+
+# Create a scree plot
+screeplot_variance(biopsy_pca)
+
+# Create a biplot
+
+# Customize biplot with longer arrows
+pca_biplot(biopsy_pca, arrow_multiplier = 2)  # Verwende einen höheren Multiplikator für längere Pfeile
+pca_biplot(biopsy_pca, arrow_multiplier = 6, obs_labels = rownames(biopsy_sample))
+
+```
+
+
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
