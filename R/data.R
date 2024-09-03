@@ -7,7 +7,7 @@
 #' \describe{
 #'   \item{V2}{(clump thickness): Thickness of the cell clumps. Scored on a scale from 1 to 10, with higher values indicating thicker cell clumps.}
 #'   \item{V3}{(uniformity of cell size): Uniformity of cell size. Scored on a scale from 1 to 10, with higher values indicating greater differences in cell size.}
-#'   \item{V4}{(uniformity of cell shape): Uniformity of cell shape. Scored on a scale from 1 to 10, with higher values indicating greater differences in cell shape.
+#'   \item{V4}{(uniformity of cell shape): Uniformity of cell shape. Scored on a scale from 1 to 10, with higher values indicating greater differences in cell shape.}
 #'   \item{V5}{(marginal adhesion): Marginal adhesion, or the ability of cells to stick together at the edges. Scored on a scale from 1 to 10, with higher values indicating stronger adhesion.}
 #'   \item{V6}{(single epithelial cell size): Size of the individual epithelial cells. Scored on a scale from 1 to 10, with higher values indicating larger epithelial cells.}
 #'   \item{V7}{(bare nuclei): Number of bare nuclei, which are nuclei not surrounded by cytoplasm. Scored on a scale from 1 to 10, with 16 values missing in the dataset.}
